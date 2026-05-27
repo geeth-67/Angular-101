@@ -16,5 +16,6 @@ export class SideNavItemComponent {
   constructor() {}
   onClick() {
     console.log('parent click' + this.name);
+    this.onNavClick.emit(this.name);
   }
 }

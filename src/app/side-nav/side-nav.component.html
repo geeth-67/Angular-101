@@ -1,5 +1,7 @@
 <div class="app-sidenav">
   <div *ngFor="let item of navItems">
-    <app-side-nav-item [name]="item.name"></app-side-nav-item>
+    <app-side-nav-item
+      [name]="item.name"
+      (onNavClick)="onNavItemClick($event)"></app-side-nav-item>
   </div>
 </div>
