@@ -1,0 +1,18 @@
+<p>{{ title }}</p>
+
+<button (click)="onButtonClick()">Change title</button>
+<button (click)="toggleLogin()">Toggle</button>
+
+<input type="text" [(ngModel)]="title">
+
+<div class="app-body">
+  <div *ngIf="isLoggedIn; else notLoggedIn">
+    <div>Profile</div>
+    <div>Log out</div>
+  </div>
+</div>
+
+<ng-template #notLoggedIn>
+  <button>Sign In</button>
+  <button>Sign out</button>
+</ng-template>
